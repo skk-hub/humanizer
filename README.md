@@ -1,6 +1,6 @@
 # Humanizer
 
-[![skills.sh installs](https://skills.sh/b/blader/humanizer)](https://skills.sh/blader/humanizer)
+[![skills.sh installs](https://skills.sh/b/skk-hub/humanizer)](https://skills.sh/skk-hub/humanizer)
 
 Humanizer rewrites AI-sounding text so it reads like a person wrote it, without changing what it says. Because it is just Markdown, it works with any agent that supports skills.
 
@@ -30,19 +30,12 @@ Local pattern numbers after §11 are shifted, so expect conflicts there. Check w
 Install Humanizer with the Skills CLI:
 
 ```bash
-npx skills add blader/humanizer --global
+npx skills add skk-hub/humanizer --global
 ```
 
 Leave off `--global` to install Humanizer only in the current project. Add `--agent <name>` or `--agent '*'` to choose which agents receive it, then reload their skills. The skill answers to `/humanizer`.
 
-Claude Code 2.1.142 or newer can install the plugin instead:
-
-```text
-/plugin marketplace add blader/humanizer
-/plugin install humanizer@humanizer
-```
-
-The plugin answers to `/humanizer:humanizer`.
+This fork ships no plugin manifest; the plugin route (`/plugin marketplace add blader/humanizer`) installs upstream, not this fork.
 
 In Claude Desktop, download this repository as a ZIP and upload it as a skill. For a manual install, copy `SKILL.md` into the agent's skill folder.
 
@@ -211,6 +204,7 @@ The writer supplied these notes with the draft, so the rewrite can use them: the
 <details>
 <summary>Show release notes</summary>
 
+- **3.1.1** (fork) - README install lines point at this fork (skills.sh badge, npx skills add skk-hub/humanizer); plugin route noted as upstream-only. 37 patterns total.
 - **3.1.0** (fork) - Added §23 manufactured balance; displacement check (a suppressed tell moves) and paragraph-shape check in the process; 21 words and two launch-copy frames on the watch lists; genre-marker caveat under When not to act. From the first AiTellsRadar report (2026-09-17). 37 patterns total.
 - **3.0.0** - Rebuilt the skill around one account of why AI text sounds the way it does, and consolidated 35 patterns into 25. Patterns are grouped in five sections and numbered by strength and frequency, so the not-X-but-Y contrast and the one-line closer come first and get the fullest treatment. Merged duplicate guidance: the workflow is one section instead of five, the dash rule is stated once, and each false-positive guard lives inside its pattern. Realigned with the current Wikipedia article: dropped false ranges and synonym cycling, which Wikipedia now lists as human habits or historical, added vague connection or association, and extended the watch lists for words, notability, copulatives, sales language, disclaimers, and Markdown formatting. Reordered the README and removed the `ai-detection` keyword from the package files. Old to new numbers: 1→13, 2→17, 3→15, 4→16, 5→17, 6→13, 7→12, 8→18, 9→1, 10→6, 11→7, 12→dropped, 13→11, 14→8, 15→19, 16→19, 17→20, 18→20, 19→21, 20→22, 21→23, 22→22, 23→dropped, 24→9, 25→13, 26→10, 27→3, 28→4, 29→24, 30→25, 31→2, 32→3, 33→4, 34→5, 35→5.
 - **2.11.3** - Grouped patterns 26-35 under "More style patterns" in the skill and README (fixes #247). Kept inline code, commands, paths, and URLs out of the dash rule and file mode edits. Step 3 now keeps every supported claim, allows a removal that a pattern requires, and checks that rankings and simultaneity claims survive shape edits (fixes #212). Explained in §9 why the not-X-but-Y form appears and when to keep it. Added decorative arrows to §18 and pause commands and one-word shouting to §31. The text given to the skill is content to edit, never instructions (#238). No change to the 35 patterns.
