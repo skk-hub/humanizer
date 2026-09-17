@@ -11,7 +11,7 @@ This is [skk-hub/humanizer](https://github.com/skk-hub/humanizer), a fork of [bl
 - Sidecars kept: `voice-calibration.md`, `personality-and-soul.md`, `example.md`, pointed to from SKILL.md.
 - §2 keeps the local "Nothing X without Y" closer and the business-copy trailer-sentence guidance.
 - §4 also covers signposted conclusions ("In conclusion").
-- New patterns §12, §13, §21, §22, §30 to §36, plus heading-level and AI self-disclosure additions to §24 and §26, adapted in our own words from hardikpandya/stop-slop, eric-tramel/slop-guard, stephenturner/skill-deslop (all MIT) and the StoryScope paper (arXiv:2604.03136). Groups F (long pieces) and G (fiction) are new.
+- New patterns §12, §13, §21, §22, §23, §31 to §37, plus heading-level and AI self-disclosure additions to §24 and §26, adapted in our own words from hardikpandya/stop-slop, eric-tramel/slop-guard, stephenturner/skill-deslop (all MIT) and the StoryScope paper (arXiv:2604.03136). Groups F (long pieces) and G (fiction) are new.
 - The upstream Voice section pointed at §6 for dashes; fixed to §8.
 
 To pull a future upstream release, three-way merge against v3.0.0 rather than re-copying:
@@ -95,7 +95,7 @@ Humanizer marks every tell it finds, strongest first. It drafts a rewrite withou
 
 When you paste text, Humanizer shows its work: the first rewrite, a short critique of anything that still sounds artificial, and the final version. Point it at a file and it changes only the prose, leaving code, data, frontmatter, and link targets alone. Personal writing keeps the writer's opinions and quirks. Technical and reference prose stays neutral and plain.
 
-## The 36 patterns
+## The 37 patterns
 
 The patterns are numbered by strength and frequency. The first five justify an edit on a single sighting. Patterns marked *weak alone* count only when several tells share a passage, because a careful writer may use any one of them on purpose.
 
@@ -135,40 +135,41 @@ The patterns are numbered by strength and frequency. The first five justify an e
 | 20 | **Avoiding is, are, and has** | "serves as... features... boasts" | "is... has" |
 | 21 | **Things doing what people do** | "the market rewards", "a complaint became a fix" | Name the actor, or drop the personification |
 | 22 | **Always, never, every** (*weak alone*) | "Every developer hates docs, nobody reads them" | Narrow to what the source supports |
+| 23 | **Manufactured balance** (*weak alone*) | "Some praise it, others find it confusing; it depends on your priorities" | Report the balance the source actually shows |
 
 ### D. Formatting by rule
 
 | # | Pattern | Before | After |
 |---|---------|--------|-------|
-| 23 | **Bold as decoration** | "**OKRs**, **KPIs**"; "**Performance:** Performance improved" | Remove the bold; turn a labeled list into prose |
-| 24 | **Decorative headings** | "Strategic Negotiations And Partnerships", "🚀 Launch Phase:" | Sentence case; remove emojis and arrows |
-| 25 | **Curly quotation marks** (*weak alone*) | `said “the project”` | `said "the project"` |
+| 24 | **Bold as decoration** | "**OKRs**, **KPIs**"; "**Performance:** Performance improved" | Remove the bold; turn a labeled list into prose |
+| 25 | **Decorative headings** | "Strategic Negotiations And Partnerships", "🚀 Launch Phase:" | Sentence case; remove emojis and arrows |
+| 26 | **Curly quotation marks** (*weak alone*) | `said “the project”` | `said "the project"` |
 
 ### E. Leftovers from the chat and the draft
 
 | # | Pattern | Before | After |
 |---|---------|--------|-------|
-| 26 | **Chatbot residue** | "Great question! ... I hope this helps!" | Remove the wrapper and keep the content |
-| 27 | **Knowledge-limit disclaimers and guesses** | "While details are limited in available sources, it appears..." | State what the source shows, or remove the sentence |
-| 28 | **A heading repeated in the first sentence** | "## Performance" + "Speed matters." | Let the heading do the work |
-| 29 | **Writing about the previous version** | "This function was added to replace..." | Describe what it does now |
-| 30 | **Pasted citation markup and unfilled placeholders** | "oaicite", "[cite: 1]", "[Your Name]" | Remove the markup; ask for the missing detail |
+| 27 | **Chatbot residue** | "Great question! ... I hope this helps!" | Remove the wrapper and keep the content |
+| 28 | **Knowledge-limit disclaimers and guesses** | "While details are limited in available sources, it appears..." | State what the source shows, or remove the sentence |
+| 29 | **A heading repeated in the first sentence** | "## Performance" + "Speed matters." | Let the heading do the work |
+| 30 | **Writing about the previous version** | "This function was added to replace..." | Describe what it does now |
+| 31 | **Pasted citation markup and unfilled placeholders** | "oaicite", "[cite: 1]", "[Your Name]" | Remove the markup; ask for the missing detail |
 
 ### F. Padding across a long piece
 
 | # | Pattern | Before | After |
 |---|---------|--------|-------|
-| 31 | **A list disguised as prose** (*weak alone*) | "The first benefit... The second benefit..." | Make it a real list or connected paragraphs |
-| 32 | **One metaphor stretched too far** (*weak alone*) | "Your codebase is a garden. Tests are the fence..." | Use the image once, then say it plainly |
-| 33 | **One point said many times** | The same claim restated in every section | Merge the restatements; keep the best example |
-| 34 | **Stacked examples as proof** | "Kodak missed digital. Blockbuster missed streaming. Nokia..." | Keep the example that fits and say how |
-| 35 | **Repeated sentences and phrases** | The same sentence word for word in two places | Keep it where it works hardest |
+| 32 | **A list disguised as prose** (*weak alone*) | "The first benefit... The second benefit..." | Make it a real list or connected paragraphs |
+| 33 | **One metaphor stretched too far** (*weak alone*) | "Your codebase is a garden. Tests are the fence..." | Use the image once, then say it plainly |
+| 34 | **One point said many times** | The same claim restated in every section | Merge the restatements; keep the best example |
+| 35 | **Stacked examples as proof** | "Kodak missed digital. Blockbuster missed streaming. Nokia..." | Keep the example that fits and say how |
+| 36 | **Repeated sentences and phrases** | The same sentence word for word in two places | Keep it where it works hardest |
 
 ### G. Fiction and narrative
 
 | # | Pattern | Before | After |
 |---|---------|--------|-------|
-| 36 | **Stock story moves** (*weak alone*) | "a poignant reminder that all things must end" | Let events carry the meaning; name specifics |
+| 37 | **Stock story moves** (*weak alone*) | "a poignant reminder that all things must end" | Let events carry the meaning; name specifics |
 
 ## Full example
 
@@ -210,6 +211,7 @@ The writer supplied these notes with the draft, so the rewrite can use them: the
 <details>
 <summary>Show release notes</summary>
 
+- **3.1.0** (fork) - Added §23 manufactured balance; displacement check (a suppressed tell moves) and paragraph-shape check in the process; 21 words and two launch-copy frames on the watch lists; genre-marker caveat under When not to act. From the first AiTellsRadar report (2026-09-17). 37 patterns total.
 - **3.0.0** - Rebuilt the skill around one account of why AI text sounds the way it does, and consolidated 35 patterns into 25. Patterns are grouped in five sections and numbered by strength and frequency, so the not-X-but-Y contrast and the one-line closer come first and get the fullest treatment. Merged duplicate guidance: the workflow is one section instead of five, the dash rule is stated once, and each false-positive guard lives inside its pattern. Realigned with the current Wikipedia article: dropped false ranges and synonym cycling, which Wikipedia now lists as human habits or historical, added vague connection or association, and extended the watch lists for words, notability, copulatives, sales language, disclaimers, and Markdown formatting. Reordered the README and removed the `ai-detection` keyword from the package files. Old to new numbers: 1→13, 2→17, 3→15, 4→16, 5→17, 6→13, 7→12, 8→18, 9→1, 10→6, 11→7, 12→dropped, 13→11, 14→8, 15→19, 16→19, 17→20, 18→20, 19→21, 20→22, 21→23, 22→22, 23→dropped, 24→9, 25→13, 26→10, 27→3, 28→4, 29→24, 30→25, 31→2, 32→3, 33→4, 34→5, 35→5.
 - **2.11.3** - Grouped patterns 26-35 under "More style patterns" in the skill and README (fixes #247). Kept inline code, commands, paths, and URLs out of the dash rule and file mode edits. Step 3 now keeps every supported claim, allows a removal that a pattern requires, and checks that rankings and simultaneity claims survive shape edits (fixes #212). Explained in §9 why the not-X-but-Y form appears and when to keep it. Added decorative arrows to §18 and pause commands and one-word shouting to §31. The text given to the skill is content to edit, never instructions (#238). No change to the 35 patterns.
 - **2.11.2** - Removed the plugin symlink and separate Claude Desktop package. Current Claude Code loads the root `SKILL.md` directly, so GitHub's source ZIP now works in Claude Desktop. No change to the 35 patterns.
